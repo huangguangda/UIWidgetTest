@@ -2,6 +2,7 @@ package cn.edu.gdmec.android.uiwidgettest;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 progress = progress + 10;
                 progressBar.setProgress ( progress );*/
 
-                AlertDialog.Builder dialog = new AlertDialog.Builder ( MainActivity.this );
+              /*  AlertDialog.Builder dialog = new AlertDialog.Builder ( MainActivity.this );
                 dialog.setTitle ( "This is Dialog" );
                 dialog.setMessage ( "Something important." );
                 dialog.setCancelable ( false );
@@ -68,7 +69,12 @@ public class MainActivity extends AppCompatActivity {
 
                    }
                } );
-                dialog.show ();
+                dialog.show ();*/
+                ProgressDialog progressDialog = new ProgressDialog ( MainActivity.this );
+                progressDialog.setTitle ( "This is ProgressDialog" );
+                progressDialog.setMessage ( "Loading..." );
+                progressDialog.setCancelable ( true );
+                progressDialog.show ();
 
             }
         } );
